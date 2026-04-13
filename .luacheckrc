@@ -1,3 +1,9 @@
+print("--- CONTAINER ENV ---")
+os.execute("env")
+print("--- GITHUB DIR ---")
+os.execute("ls -R /github")
+print("--- END DEBUG ---")
+
 package.path = package.path .. ";/github/workspace/?.lua"
 local github_env = os.getenv("GITHUB_ENV")
 if github_env then
